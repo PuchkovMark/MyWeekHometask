@@ -1,15 +1,17 @@
 body {
-    padding:0;
-    margin:0;
-    overflow:hidden;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
     height: 100vh;
     z-index: 1;
     font-family: 'Pangolin', cursive;
     color: #fff;
 }
+
 h1 {
     text-align: center;
 }
+
 .main-wrapper {
     position: fixed;
     z-index: 2;
@@ -25,11 +27,14 @@ h1 {
     color: #333333;
     font-size: 22px;
 }
+
 .mile {
+    text-align: center;
     display: inline-block;
     width: 211px;
     padding: 10px;
 }
+
 #res {
     padding-left: 10px;
 }
@@ -43,9 +48,10 @@ h1 {
     width: 197px;
     border-radius: 2px 2px 0 0;
 }
+
 .eqv {
     display: inline-block;
-    line-height: 44px;
+    line-height: 80px;
     width: 27px;
     text-align: center;
     font-size: 26px;
@@ -55,11 +61,14 @@ h1 {
     margin-left: -4px;
     margin-right: -4px;
 }
+
 .kilo {
     display: inline-block;
     width: 211px;
     padding: 10px;
+    text-align: center;
 }
+
 .convForm2 {
     border: 1px solid #D9D9D9;
     border-top: 1px solid silver;
@@ -70,6 +79,7 @@ h1 {
     width: 197px;
     border-radius: 2px 2px 0 0;
 }
+
 .wrap {
     position: absolute;
     top: 40%;
@@ -77,6 +87,7 @@ h1 {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+
 .dws {
     display: inline-block;
     padding: 10px;
@@ -97,6 +108,7 @@ h1 {
     transition: .5s;
     overflow: hidden;
 }
+
 .butt::before,
 .butt::after {
     position: absolute;
@@ -110,14 +122,49 @@ h1 {
     transition: .3s;
     z-index: -1;
 }
+
 .butt::after {
     opacity: 1;
     transition-delay: .2s;
 }
+
 .butt:hover {
     color: #fff;
 }
+
 .butt:hover::before,
 .butt:hover::after {
     left: 0;
+}
+
+select {
+    display: inline-block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none !important;
+    background: url(../media/select-arrow-open.png) no-repeat 96% 50%;
+    background-size: 25px;
+    background-color: #fff;
+    height: auto;
+    width: 190px;
+    border: 1px solid #C8BFC4;
+    border-radius: 4px;
+    padding: 10px;
+    color: #74646e;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+.fancyArrow {
+    width: 23px;
+    height: 28px;
+    position: absolute;
+    display: inline-block;
+    top: 1px;
+    right: 3px;
+    pointer-events: none;
+}
+select::-ms-expand {
+    display: none;
 }
