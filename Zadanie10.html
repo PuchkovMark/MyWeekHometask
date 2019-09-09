@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <script src="jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Задание №0</title>
+    <title>Задание №10</title>
+
 </head>
 <body>
 
@@ -53,188 +55,10 @@
     <label for="choice12">Автоматическое включение аварийной сигнализации при экстренном торможении</label><br>
 
     <div>
-        <h3 style="display: flex;" >Стоимость:<div id="res">&nbsp528210</div>руб.</h3>
+        <h3>Стоимость:<span id="res">528210</span> руб.</h3>
     </div>
 
 </div>
 
-<script type="text/javascript">
-
-    jQuery(function ($) {
-        /*var $c1 = $('#choice1');
-        var $c2 = $('#choice2');
-        var $c3 = $('#choice3');
-        var $c4 = $('#choice4');
-        var $c5 = $('#choice5');
-        var $c6 = $('#choice6');
-        var $c7 = $('#choice7');
-        var $c8 = $('#choice8');
-        var $c9 = $('#choice9');
-        var $c10 = $('#choice10');
-        var $c11 = $('#choice11');
-        var $c12 = $('#choice12');*/
-
-        var $choice = $('input[name=choice]');
-        //var choice = $choice.val();
-        /*var $res = $('#res');
-        var str = 528210;
-        var c1  = false;
-        var c2  = false;
-        var c3  = false;
-        var c4  = false;
-        var c5  = false;
-        var c6  = false;
-        var c7  = false;
-        var c8  = false;
-        var c9  = false;
-        var c10 = false;
-        var c11 = false;
-        var c12 = false;*/
-
-        $choice.click(function () {
-            for(let i = 0; i < $choice.length; i++){
-                if($choice[0].checked){
-                    //
-                }
-                if($choice[1].checked){
-
-                }
-            }
-            /*choice = $choice.filter(':checked').val();
-            $res.text(textChange(choice, str));*/
-        });
-
-        /*var textChange = function (choice, str) {
-
-            var result;
-            switch (choice) {
-                case '1':
-                    if (c1 === false){
-                        result = str + 6632;
-                        c1 = true;
-                    } else {
-                        result = str - 6632;
-                        c1 = false;
-                    }
-
-                    break;
-                case '2':
-                    if (c2 === false){
-                        result = str + 4545;
-                        c2 = true;
-                    } else {
-                        result = str - 4545;
-                        c2 = false;
-                    }
-
-                    break;
-                case '3':
-                    if (c3 === false){
-                        result = str + 3565;
-                        c3 = true;
-                    } else {
-                        result = str - 3565;
-                        c3 = false;
-                    }
-
-                    break;
-                case '4':
-                    if (c4 === false){
-                        result = str + 7943;
-                        c4 = true;
-                    } else {
-                        result = str - 7943;
-                        c4 = false;
-                    }
-
-                    break;
-                case '5':
-                    if (c5 === false){
-                        result = str + 6883;
-                        c5 = true;
-                    } else {
-                        result = str - 6883;
-                        c5 = false;
-                    }
-
-                    break;
-                case '6':
-                    if (c6 === false){
-                        result = str + 8643;
-                        c6 = true;
-                    } else {
-                        result = str - 8643;
-                        c6 = false;
-                    }
-
-                    break;
-                case '7':
-                    if (c7 === false){
-                        result = str + 9742;
-                        c7 = true;
-                    } else {
-                        result = str - 9742;
-                        c7 = false;
-                    }
-
-                    break;
-                case '8':
-                    if (c8 === false){
-                        result = str + 3465;
-                        c8 = true;
-                    } else {
-                        result = str - 3465;
-                        c8 = false;
-                    }
-
-                    break;
-                case '9':
-                    if (c9 === false){
-                        result = str + 8753;
-                        c9 = true;
-                    } else {
-                        result = str - 8753;
-                        c9 = false;
-                    }
-
-                    break;
-                case '10':
-                    if (c10 === false){
-                        result = str + 3240;
-                        c10 = true;
-                    } else {
-                        result = str - 3240;
-                        c10 = false;
-                    }
-
-                    break;
-                case '11':
-                    if (c11 === false){
-                        result = str + 6732;
-                        c11 = true;
-                    } else {
-                        result = str - 6732;
-                        c11 = false;
-                    }
-
-                    break;
-                case '12':
-                    if (c12 === false){
-                        result = str + 7630;
-                        c12 = true;
-                    } else {
-                        result = str - 7630;
-                        c12 = false;
-                    }
-
-                    break;
-            }
-            return result;
-        }*/
-
-
-    });
-
-</script>
 </body>
 </html>

@@ -30,6 +30,10 @@ h1 {
     width: 211px;
     padding: 10px;
 }
+#res {
+    padding-left: 10px;
+}
+
 .convForm1 {
     border: 1px solid silver;
     font-size: 180%;
