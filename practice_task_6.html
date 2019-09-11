@@ -2,79 +2,61 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style6.css">
+    <link rel="stylesheet" href="css/style_for_6.css">
     <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
+    <script src="js/script_for_6.js" type="text/javascript"></script>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Задание №6</title>
+    <title>Задание №10</title>
 
 </head>
 <body>
 
 <div id="main-wrapper" class="main-wrapper">
-    <h1>Определить самое длинное слово в тексте</h1>
 
-    <div class="wrap">
+    <h2>Выберите комплектацию для автомобиля</h2>
+    <p><img src="media/lada-vesta-obzor-16.jpg" height="200" alt="Картинка lada-vesta-obzor-16"></p>
 
-        <h2>Введите текст:</h2>
+    <input type="checkbox" id="choice1" name="choice" value="1">
+    <label for="choice1">Подушка безопасности водителя</label><br>
 
-        <textarea id="text" rows="10" cols="60"></textarea>
-        <br/>
-        <hr/>
-        <div class="butt-wrap">
-        <div id="execute" class="dws">
-            <a href="#" id="excute-butt" class="butt">Выполнить</a>
-        </div>
-        <div id="clear" class="dws">
-            <a href="#" id="clear-butt" class="butt">Очистить</a>
-        </div>
-        </div>
-        <div>
-            <h3>Результат:</h3>
-            <div id="res"></div>
-        </div>
+    <input type="checkbox" id="choice2" name="choice" value="2">
+    <label for="choice2">Подушка безопасности переднего пассажира с функцией отключения</label><br>
 
-        <!-- <p id="countClass" class="text">
-                 <textarea rows="10" cols="45" name="text" onkeyup="countChar(this)"></textarea>
-         <div id="charNum">55</div>
-         </p>-->
-        <!--<div class="dws">
-            <a href="#" class="butt" onclick="following();">Преобразовать</a>
-        </div>-->
+    <input type="checkbox" id="choice3" name="choice" value="3">
+    <label for="choice3">Крепления для детских сидений ISOFIX</label><br>
 
+    <input type="checkbox" id="choice4" name="choice" value="4">
+    <label for="choice4">Блокировка задних дверей от открывания детьми</label><br>
+
+    <input type="checkbox" id="choice5" name="choice" value="5">
+    <label for="choice5">Автоматическое запирание дверей при начале движения</label><br>
+
+    <input type="checkbox" id="choice6" name="choice" value="6">
+    <label for="choice6">Автоматическое включение аварийной сигнализации при экстренном торможении</label><br>
+
+    <input type="checkbox" id="choice7" name="choice" value="7">
+    <label for="choice7">Автоматическое отпирание дверей и включение аварийной сигнализации при столкновении</label><br>
+
+    <input type="checkbox" id="choice8" name="choice" value="8">
+    <label for="choice8">Иммобилайзер</label><br>
+
+    <input type="checkbox" id="choice9" name="choice" value="9">
+    <label for="choice9">Дневные ходовые огни</label><br>
+
+    <input type="checkbox" id="choice10" name="choice" value="10">
+    <label for="choice10">Система экстренного оповещения ЭРА-ГЛОНАСС</label><br>
+
+    <input type="checkbox" id="choice11" name="choice" value="11">
+    <label for="choice11">Антиблокировочная система с электронным распределением тормозных сил (ABS, EBD)</label><br>
+
+    <input type="checkbox" id="choice12" name="choice" value="12">
+    <label for="choice12">Автоматическое включение аварийной сигнализации при экстренном торможении</label><br>
+
+    <div>
+        <h3>Стоимость:<span id="res">528210</span> руб.</h3>
     </div>
-
 </div>
-<script>
-
-    var execute_butt = document.getElementById('excute-butt');
-    var clear_butt   = document.getElementById('clear-butt');
-
-    execute_butt.onclick = function () {
-        /*document.getElementById('res').value = '000000';*/
-        var regex = /\s|,\s|\.\s*/;
-        var text = document.getElementById('text');
-        var res = document.getElementById('res');
-        var result = text.value.toString().split(regex);
-        console.log(result);
-        var count = 0;
-        var longestWord = '';
-        for(let i = 0; i < result.length; i++){
-            if(result[i].length > count){
-                count = result[i].length;
-                longestWord = result[i];
-            }
-            console.log(longestWord);
-        }
-        res.innerHTML = longestWord;
-
-    };
-    clear_butt.onclick = function () {
-        var text = document.getElementById('text');
-        text.value = '';
-    };
-
-</script>
 </body>
 </html>

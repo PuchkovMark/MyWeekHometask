@@ -41,7 +41,7 @@ h1 {
 }
 .eqv {
     display: inline-block;
-    line-height: 44px;
+    line-height: 70px;
     width: 27px;
     text-align: center;
     font-size: 26px;
@@ -75,7 +75,7 @@ h1 {
 }
 .dws {
     display: inline-block;
-    padding: 10px;
+    padding: 20px;
 }
 
 .butt {

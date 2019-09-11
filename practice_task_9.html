@@ -1,124 +1,44 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/style9.css">
-    <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Задание №9</title>
+    <title>Practice task 13</title>
+    <script src="js/script_for_13.js"></script>
+    <link rel="stylesheet" href="css/style_for_9.css">
 
 </head>
+
 <body>
-
 <div id="main-wrapper" class="main-wrapper">
-    <h1>Конвертор</h1>
+    <h1>Калькулятор</h1>
+    <div id="calculator">
+        <div class="top">
+            <span class="clear">C</span>
+            <div class="screen"></div>
+        </div>
 
-    <h3>Цена доллара в рублях:</h3>
-    <input class="convForm1" id="convertForm1" type="number" size="10">
-    <div class="dws">
-        <a href="#" id="button" class="butt">Расчитать</a>
+        <div class="keys">
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span class="operator">+</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="operator">-</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span class="operator">÷</span>
+            <span>0</span>
+            <span>.</span>
+            <span class="eval">=</span>
+            <span class="operator">x</span>
+        </div>
     </div>
-    <hr/>
-
-    <table id="MyTable">
-        <tr>
-            <td><strong>Товар №1</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd" >145</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №2</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">456</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №3</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">895</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №4</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">368</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №5</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">463</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №6</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">751</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №7</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">246</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №8</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">563</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №9</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">753</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-        <tr>
-            <td><strong>Товар №10</strong></td>
-            <td style="padding-left: 20px; display: flex;"><div class="usd">134</div><span>$</span></td>
-            <td style="padding-left: 20px" class="rus">???₽</td>
-        </tr>
-    </table>
-
-    <!--<div class="wrap">
-        <div class="mile">
-            <input class="convForm1" id="convertForm1" type="text" size="10" onkeypress="validate(event)"><br/>
-            <span class="forMile">Фунт</span>
-        </div>
-        <div class="eqv">=</div>
-        <div class="kilo">
-            <input class="convForm2" id="convertForm2" type="text" size="10"><br/>
-            <span class="forKilo">Килограмм</span>
-        </div>
-        <div class="dws">
-            <a href="#" id="button" class="butt">Преобразовать</a>
-        </div>
-    </div>-->
-
 </div>
-<script type="text/javascript">
-
-    var elem = document.getElementById('button');
-
-    elem.onclick = function () {
-
-        var table = document.getElementById('MyTable');
-        var usdCell = table.getElementsByClassName('usd');
-        var rusCell = table.getElementsByClassName('rus');
-
-        for (let i = 0; i < usdCell.length; i++) {
-            //console.log(usdCell[i].innerHTML);
-            rusCell[i].innerHTML = multy(usdCell[i].innerText, rusCell[i].innerText) + '₽';
-            //rusCell.innerHTML = '';
-            //rusCell.innerHTML = usdCell[i] * conv;
-        }
-
-    };
-
-    function multy(x, y) {
-        var conv = document.getElementById('convertForm1');
-        y = x * conv.value;
-        //console.log(y);
-        return y;
-    }
-
-
-</script>
-
+<script src="js/script_for_13.js"></script>
 </body>
+
 </html>
