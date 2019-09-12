@@ -23,7 +23,6 @@ label {
 .photo img {
     max-height: 100%;
     max-width: 100%;
-
     display: inline-block;
     text-align: center;
     box-shadow: unset;
@@ -269,16 +268,16 @@ label {
 .dz-progress {
     display: none;
 }
-.dropzone.dz-clickable a.remove,
-.dropzone.dz-clickable i {
+#dropzone.dz-clickable a.remove,
+#dropzone.dz-clickable i {
     cursor: pointer;
 }
 
-.dropzone .dz-message {
+#dropzone .dz-message {
     color: #D5D5D5;
 }
 
-.dropzone .dz-message .fa {
+#dropzone .dz-message .fa {
     font-size:64px;
 }
 
