@@ -19,7 +19,6 @@ jQuery(function ($) {
             var fileCount = 0;
             var $form = $('#form');
 
-
             this.on('addedfile', function (file) {
                 fileCount++;
                 if (fileCount <= dz.options.maxFiles) {
@@ -29,18 +28,6 @@ jQuery(function ($) {
                         $form.append($(usedInput)); // Добавляем скрытый input с файлом к форме
                         usedInput.name = "file[]";
                     }, 0);
-
-                    // Добавляем функцию просмотра фотографий
-                    var pic = file.previewElement;
-                    pic.addEventListener("click", function (e){
-                        e.preventDefault();
-                        e.stopPropagation();
-                        /*var foo = pic.getElementsByTagName('img');
-                        var boo = pic.getElementsByClassName('dz-image');*/
-                        pic.style.cssText = 'all: unset; pointer-events: none; width: 100%;';
-                        /*boo.style.cssText = 'all: unset; position: absolute; width: 540px; transform: translate(-45%, -35%); z-index: 100;';*/
-                    });
-
                     // Добавляем кнопку удаления файла
                     var removeButton = Dropzone.createElement('<a class="remove" href="#"><i class="fa fa-times"></i></a>');
                     removeButton.addEventListener("click", function (e) {
@@ -60,9 +47,7 @@ jQuery(function ($) {
                         class_name: 'gritter-error gritter-center'
                     });
                 }
-
             });
-
             this.on('maxfilesexceeded', function (file) {
                 this.removeFile(file);
             });

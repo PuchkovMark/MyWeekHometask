@@ -1,16 +1,24 @@
 jQuery(function ($) {
 
     let $choice = $('input[name=choice]');
-    let $num    = $('#num');
-    let $res    = $('#res');
+    let $num = $('#num');
+    let $res = $('#res');
 
-    $num.on('input', function () {
-        $res.text($choice.val() * $num.val());
-    });
+    let checked = $choice.val();
+
     $choice.on('click', function () {
-        if($num.val() !== ''){
+
+        if ($num.val() !== '') {
             $res.text(this.value * $num.val());
         }
+        checked = this.value;
     });
 
+    $num.on('input', function () {
+        $res.text(checked * $num.val());
+
+        if ($num.val() === '') {
+            $res.text('');
+        }
+    });
 });
