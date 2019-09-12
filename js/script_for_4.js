@@ -7,12 +7,10 @@ function validate(evt) {
     var el = document.getElementById('convertForm1');
     key = String.fromCharCode(key);
     str += key;
-    //console.log(key);
-    //console.log('str - "' + str + '"');
+
     var regex = /^\d+\.?\d{0,2}$/;
     if (!regex.test(str)) {
         theEvent.returnValue = false;
-        //str = el.value;
         str = el.value;
 
         if (theEvent.preventDefault) theEvent.preventDefault();

@@ -4,59 +4,45 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style_for_6.css">
     <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
-    <script src="js/script_for_6.js" type="text/javascript"></script>
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Practise task 6</title>
+    <title>Задание №10</title>
 
 </head>
 <body>
 
 <div id="main-wrapper" class="main-wrapper">
 
-    <h2>Выберите комплектацию для автомобиля</h2>
-    <p><img src="media/lada-vesta-obzor-16.jpg" height="200" alt="Картинка lada-vesta-obzor-16"></p>
+    <form>
+        <h1>Фото</h1>
 
-    <input type="checkbox" id="choice1" name="choice" value="1">
-    <label for="choice1">Подушка безопасности водителя</label><br>
+        <div>
+            <input type="radio" id="choice1" name="choice" value="10" checked>
+            <label for="choice1">10х15</label><br>
 
-    <input type="checkbox" id="choice2" name="choice" value="2">
-    <label for="choice2">Подушка безопасности переднего пассажира с функцией отключения</label><br>
+            <input type="radio" id="choice2" name="choice" value="27">
+            <label for="choice2">15х20</label><br>
 
-    <input type="checkbox" id="choice3" name="choice" value="3">
-    <label for="choice3">Крепления для детских сидений ISOFIX</label><br>
+            <input type="radio" id="choice3" name="choice" value="66">
+            <label for="choice3">20х30</label><br>
 
-    <input type="checkbox" id="choice4" name="choice" value="4">
-    <label for="choice4">Блокировка задних дверей от открывания детьми</label><br>
+            <input type="radio" id="choice4" name="choice" value="132">
+            <label for="choice4">30х40</label><br>
 
-    <input type="checkbox" id="choice5" name="choice" value="5">
-    <label for="choice5">Автоматическое запирание дверей при начале движения</label><br>
+            <input type="radio" id="choice5" name="choice" value="142">
+            <label for="choice5">30х90</label><br>
+        </div><br/>
 
-    <input type="checkbox" id="choice6" name="choice" value="6">
-    <label for="choice6">Автоматическое включение аварийной сигнализации при экстренном торможении</label><br>
+        <label for="num">Введите колличество:</label><br>
+        <input type="number" class="convForm1" id="num" name="quantity">
 
-    <input type="checkbox" id="choice7" name="choice" value="7">
-    <label for="choice7">Автоматическое отпирание дверей и включение аварийной сигнализации при столкновении</label><br>
+        <div>
+            <h2>Стоимость:<div id="res"></div></h2>
+        </div>
 
-    <input type="checkbox" id="choice8" name="choice" value="8">
-    <label for="choice8">Иммобилайзер</label><br>
-
-    <input type="checkbox" id="choice9" name="choice" value="9">
-    <label for="choice9">Дневные ходовые огни</label><br>
-
-    <input type="checkbox" id="choice10" name="choice" value="10">
-    <label for="choice10">Система экстренного оповещения ЭРА-ГЛОНАСС</label><br>
-
-    <input type="checkbox" id="choice11" name="choice" value="11">
-    <label for="choice11">Антиблокировочная система с электронным распределением тормозных сил (ABS, EBD)</label><br>
-
-    <input type="checkbox" id="choice12" name="choice" value="12">
-    <label for="choice12">Автоматическое включение аварийной сигнализации при экстренном торможении</label><br>
-
-    <div>
-        <h3>Стоимость:<span id="res">528210</span> руб.</h3>
-    </div>
+    </form>
 </div>
+<script type="text/javascript" src="js/script_for_6.js"></script>
 </body>
 </html>

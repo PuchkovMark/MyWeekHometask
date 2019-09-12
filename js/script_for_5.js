@@ -7,10 +7,7 @@ elem.onclick = function () {
     var rusCell = table.getElementsByClassName('rus');
 
     for (let i = 0; i < usdCell.length; i++) {
-        //console.log(usdCell[i].innerHTML);
         rusCell[i].innerHTML = multy(usdCell[i].innerText, rusCell[i].innerText) + '₽';
-        //rusCell.innerHTML = '';
-        //rusCell.innerHTML = usdCell[i] * conv;
     }
 
 };
@@ -18,6 +15,5 @@ elem.onclick = function () {
 function multy(x, y) {
     var conv = document.getElementById('convertForm1');
     y = x * conv.value;
-    //console.log(y);
     return y;
 }
